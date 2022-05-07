@@ -1,39 +1,11 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class PostsRoute extends Route {
+  @service store;
+
   model() {
-    const posts = [
-      {
-        id: 1,
-        ownerId: 1,
-        title: 'Tytuł testowy 1',
-        body: 'Zawartość testowa 1',
-        likesCount: 0,
-        isDeleted: false,
-        likedByUserIds: [],
-        dislikedByUserIds: [],
-      },
-      {
-        id: 2,
-        ownerId: 1,
-        title: 'Tytuł testowy 2',
-        body: 'Zawartość testowa 2',
-        likesCount: 0,
-        isDeleted: false,
-        likedByUserIds: [],
-        dislikedByUserIds: [],
-      },
-      {
-        id: 3,
-        ownerId: 1,
-        title: 'Tytuł testowy 3',
-        body: 'Zawartość testowa 3',
-        likesCount: 0,
-        isDeleted: false,
-        likedByUserIds: [],
-        dislikedByUserIds: [],
-      },
-    ];
+    const posts = this.store.findAll('post');
     return posts;
   }
 }
