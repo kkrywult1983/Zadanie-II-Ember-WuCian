@@ -1,25 +1,11 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class UsersRoute extends Route {
+  @service store;
+
   model() {
-    const users = [
-      {
-        id: 1,
-        username: 'admin',
-        password: 'admin123',
-        email: 'admin@admin.com',
-        isDeleted: false,
-        isAdmin: true,
-      },
-      {
-        id: 2,
-        username: 'user',
-        password: 'user123',
-        email: 'user@user.com',
-        isDeleted: false,
-        isAdmin: false,
-      },
-    ];
+    const users = this.store.findAll('user');
     return users;
   }
 }
