@@ -5,18 +5,22 @@ export default class ApplicationRoute extends Route {
   @service store;
 
   async beforeModel() {
-    window.localStorage.clear();
-
     const user1 = {
+      id: 1,
       username: 'admin',
       password: 'admin123',
       email: 'admin@admin.com',
+      photoURL:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAKvFRFzzAyjw5oppVvMezprCLfL8GMnFV_EIqJP5PQr09oSsJSIX1v0nuFEH4VWU2HbA&usqp=CAU',
       isAdmin: true,
     };
     const user2 = {
+      id: 2,
       username: 'user',
       password: 'user123',
       email: 'user@user.com',
+      photoURL:
+        'https://demotywatory.pl/uploads/201910/1572634665_nejss4_fb_plus.jpg',
     };
 
     const user1Model = this.store.createRecord('user', user1);
@@ -25,16 +29,19 @@ export default class ApplicationRoute extends Route {
     await user2Model.save();
 
     const post1 = {
+      id: 1,
       title: 'Testowy 1',
       body: 'Zawartość testowa 1',
       owner: user1Model,
     };
     const post2 = {
+      id: 2,
       title: 'Testowy 2',
       body: 'Zawartość testowa 2',
       owner: user1Model,
     };
     const post3 = {
+      id: 3,
       title: 'Testowy 3',
       body: 'Zawartość testowa 3',
       owner: user2Model,

@@ -1,2 +1,18 @@
-{{page-title "Show"}}
+{{page-title 'Show'}}
+<div class='card' style='width: 18rem;'>
+  <img src='{{this.model.photoURL}}' class='card-img-top' alt='...' />
+  <div class='card-body'>
+    <h5 class='card-title'>{{this.model.username}}</h5>
+  </div>
+  <ul class='list-group list-group-flush'>
+    <li class='list-group-item'>{{this.model.id}}</li>
+    <li class='list-group-item'>{{this.model.email}}</li>
+    <li class='list-group-item'>{{this.model.password}}</li>
+  </ul>
+  <div class='card-body'>
+    <a href='#' class='card-link'>Card link</a>
+    <a href='#' class='card-link'>Another link</a>
+  </div>
+</div>
+
 {{outlet}}

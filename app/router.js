@@ -15,7 +15,7 @@ Router.map(function () {
   this.route('users');
 
   this.route('user', function () {
-    this.route('show');
+    this.route('show', { path: '/:id' });
   });
   this.route('settings');
 });
