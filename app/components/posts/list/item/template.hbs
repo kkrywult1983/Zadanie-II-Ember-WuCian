@@ -1,6 +1,9 @@
 <div class='card'>
   <div class='card-body'>
-    <h5 class='card-title'>{{@post.title}}</h5>
+    <h5 class='card-title'><LinkTo
+        @route='post.show'
+        @model={{@post}}
+      >{{@post.title}}</LinkTo></h5>
     <h6 class='card-subtitle mb-2 text-muted'>Owner:
       {{@post.owner.username}}</h6>
     <p class='card-text'>{{@post.body}}</p>

@@ -1,2 +1,16 @@
-{{page-title "Show"}}
+{{page-title 'Show'}}
+<Header>Post {{this.model.id}}</Header>
+
+{{!-- <Post::Card @posts={{this.model}}/> --}}
+<div class='card mt-3'>
+  <div class='card-header'>
+    {{this.model.owner.username}}
+  </div>
+  <div class='card-body'>
+    <blockquote class='blockquote mb-0'>
+      <p>{{this.model.title}}</p>
+      <footer class='blockquote-footer'>{{this.model.body}}</footer>
+    </blockquote>
+  </div>
+</div>
 {{outlet}}
