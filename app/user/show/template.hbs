@@ -1,21 +1,5 @@
 {{page-title 'Show'}}
-{{!-- <User::Details @user={{this.model}} /> --}}
-
-<div class='card mx-auto' style='width: 18rem;'>
-  <img src='{{this.model.photoURL}}' class='card-img-top' alt='...' />
-  <div class='card-body'>
-    <h5 class='card-title'>{{this.model.username}}</h5>
-  </div>
-  <ul class='list-group list-group-flush'>
-    <li class='list-group-item'>{{this.model.id}}</li>
-    <li class='list-group-item'>{{this.model.email}}</li>
-    <li class='list-group-item'>{{this.model.password}}</li>
-  </ul>
-  <div class='card-body'>
-    <a href='#' class='card-link'>Card link</a>
-    <a href='#' class='card-link'>Another link</a>
-  </div>
-</div>
+<User::Details @user={{this.model}} />
 
 <Posts::List @posts={{this.model.posts}} />
 
