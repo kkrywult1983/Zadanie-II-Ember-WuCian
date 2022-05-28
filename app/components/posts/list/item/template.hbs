@@ -7,8 +7,11 @@
     <h6 class='card-subtitle mb-2 text-muted'>Owner:
       {{@post.owner.username}}</h6>
     <p class='card-text'>{{@post.body}}</p>
-    <a href='#' class='card-link'>Like</a>
-    <a href='#' class='card-link'>Dislike</a>
+    {{#if this.isAlreadyLikedByCurrentUser}}
+      <a href='#' class='card-link'>Dislike ({{@post.likes.length}})</a>
+    {{else}}
+      <a href='#' class='card-link'>Like ({{@post.likes.length}})</a>
+    {{/if}}
     <a href='#' class='card-link'>Delete</a>
   </div>
 </div>
