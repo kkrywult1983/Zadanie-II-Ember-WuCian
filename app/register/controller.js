@@ -1,10 +1,8 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-import { storageFor } from 'ember-local-storage';
 
 export default class RegisterController extends Controller {
-  @storageFor('logged-as') loggedAs;
   @service store;
   @service router;
 
