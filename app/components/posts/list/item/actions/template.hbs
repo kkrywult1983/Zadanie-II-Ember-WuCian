@@ -1,0 +1,14 @@
+{{#if this.isAlreadyLikedByCurrentUser}}
+  <a href='#' class='card-link' {{on 'click' this.onDislike}}>
+    Dislike ({{@post.likes.length}})
+    <Posts::List::Item::Actions::WhoLikesItTooltip @post={{@post}} />
+  </a>
+
+{{else}}
+
+  <a href='#' class='card-link' {{on 'click' this.onLike}}>
+    Like ({{@post.likes.length}})
+    <Posts::List::Item::Actions::WhoLikesItTooltip @post={{@post}} />
+  </a>
+{{/if}}
+<a href='#' class='card-link'>Delete</a>

@@ -1,0 +1,7 @@
+{{#if @post.likes.length}}
+  <EmberTooltip @side='bottom'>
+    {{#each @post.likes as |like|}}
+      {{like.user.username}}
+    {{/each}}
+  </EmberTooltip>
+{{/if}}

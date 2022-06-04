@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
-export default class PostsListItemComponent extends Component {
+export default class PostsListItemActionsComponent extends Component {
   @service session;
   @service store;
 
