@@ -1,7 +1,10 @@
 {{#if @post.likes.length}}
-  <EmberTooltip @side='bottom'>
+  <EmberPopover @side='bottom'>
     {{#each @post.likes as |like|}}
-      {{like.user.username}}
+      <LinkTo
+        @route='home.user.show'
+        @model={{like.user}}
+      >{{like.user.username}}</LinkTo>
     {{/each}}
-  </EmberTooltip>
+  </EmberPopover>
 {{/if}}
