@@ -2,6 +2,7 @@
   <EmberPopover @side='bottom'>
     {{#each @post.likes as |like|}}
       <LinkTo
+        class='link-light'
         @route='home.user.show'
         @model={{like.user}}
       >{{like.user.username}}</LinkTo>
