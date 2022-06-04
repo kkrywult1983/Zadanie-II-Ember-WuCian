@@ -8,9 +8,29 @@
       {{@post.owner.username}}</h6>
     <p class='card-text'>{{@post.body}}</p>
     {{#if this.isAlreadyLikedByCurrentUser}}
-      <a href='#' class='card-link' {{on 'click' this.onDislike}}>Dislike ({{@post.likes.length}})</a>
+      <a href='#' class='card-link' {{on 'click' this.onDislike}}>
+        Dislike ({{@post.likes.length}})
+        {{#if @post.likes.length}}
+          <EmberTooltip @side='bottom'>
+            {{#each @post.likes as |like|}}
+              {{like.user.username}}
+            {{/each}}
+          </EmberTooltip>
+        {{/if}}
+      </a>
+
     {{else}}
-      <a href='#' class='card-link' {{on 'click' this.onLike}}>Like ({{@post.likes.length}})</a>
+
+      <a href='#' class='card-link' {{on 'click' this.onLike}}>
+        Like ({{@post.likes.length}})
+        {{#if @post.likes.length}}
+          <EmberTooltip @side='bottom'>
+            {{#each @post.likes as |like|}}
+              {{like.user.username}}
+            {{/each}}
+          </EmberTooltip>
+        {{/if}}
+      </a>
     {{/if}}
     <a href='#' class='card-link'>Delete</a>
   </div>
