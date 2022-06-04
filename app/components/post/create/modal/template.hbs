@@ -7,11 +7,23 @@
       <div class='modal-body'>
         <div class='mb-3'>
           <label for='postTitle' class='form-label'>Title:</label>
-          <input type='email' class='form-control' id='postTitle' />
+          <input
+            type='email'
+            class='form-control'
+            id='postTitle'
+            value={{@title}}
+            {{on 'input' @onTitleChange}}
+          />
         </div>
         <div class='mb-3'>
           <label for='postContent' class='form-label'>Content:</label>
-          <textarea class='form-control' id='postContent' rows='3'></textarea>
+          <textarea
+            class='form-control'
+            id='postContent'
+            rows='3'
+            value={{@content}}
+            {{on 'input' @onContentChange}}
+          ></textarea>
         </div>
       </div>
       <div class='modal-footer'>
@@ -20,7 +32,12 @@
           class='btn btn-danger'
           {{on 'click' @onClose}}
         >Cancel</button>
-        <button type='button' class='btn btn-primary'>Create</button>
+        <button
+          type='button'
+          class='btn btn-primary'
+          disabled={{@hasEmptyFields}}
+          {{on 'click' @onSave}}
+        >Create</button>
       </div>
     </div>
   </div>
