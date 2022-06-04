@@ -1,0 +1,27 @@
+<ModalDialog @translucentOverlay={{true}}>
+  <div class='modal-dialog' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title'>Create post</h5>
+      </div>
+      <div class='modal-body'>
+        <div class='mb-3'>
+          <label for='postTitle' class='form-label'>Title:</label>
+          <input type='email' class='form-control' id='postTitle' />
+        </div>
+        <div class='mb-3'>
+          <label for='postContent' class='form-label'>Content:</label>
+          <textarea class='form-control' id='postContent' rows='3'></textarea>
+        </div>
+      </div>
+      <div class='modal-footer'>
+        <button
+          type='button'
+          class='btn btn-danger'
+          {{on 'click' @onClose}}
+        >Cancel</button>
+        <button type='button' class='btn btn-primary'>Create</button>
+      </div>
+    </div>
+  </div>
+</ModalDialog>
