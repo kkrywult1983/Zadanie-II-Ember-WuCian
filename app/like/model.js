@@ -1,7 +1,7 @@
 import Model, { attr, belongsTo } from '@ember-data/model';
 
 export default class LikeModel extends Model {
-  @belongsTo('user') user;
-  @belongsTo('post') post;
+  @belongsTo('user', { autoSave: true }) user;
+  @belongsTo('post', { autoSave: true }) post;
   @attr('date', { defaultValue: () => new Date() }) createdAt;
 }

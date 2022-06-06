@@ -44,7 +44,7 @@
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.1.1",
     "ember-load-initializers": "^2.1.2",
-    "ember-local-storage": "^2.0.1",
+    "ember-local-storage": "git+https://github.com/wozny1989/ember-local-storage#50c87a4ce04892245e6d7a47bbd3f22cae560235",
     "ember-modal-dialog": "^4.0.1",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^5.1.5",
