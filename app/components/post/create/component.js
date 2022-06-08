@@ -1,12 +1,13 @@
+/* eslint-disable prettier/prettier */
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
 
 export default class PostCreateModalComponent extends Component {
+  @tracked isShowCreateModal = false;
   @service session;
   @service store;
-  @tracked isShowCreateModal = false;
   @tracked title = '';
   @tracked content = '';
 
