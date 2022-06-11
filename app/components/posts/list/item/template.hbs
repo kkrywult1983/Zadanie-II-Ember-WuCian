@@ -1,5 +1,7 @@
 <div class='card'>
   <div class='card-body'>
+    <h6 class='card-subtitle mb-2 text-muted pedal'>Created at:
+      {{@post.fullDate}}</h6>
     <h2 class='card-title'><LinkTo
         @route='home.post.show'
         @model={{@post}}
