@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
