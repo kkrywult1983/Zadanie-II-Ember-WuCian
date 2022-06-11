@@ -34,18 +34,21 @@ export default class ApplicationRoute extends Route {
       title: 'Testowy 1',
       body: 'Zawartość testowa 1',
       owner: user1Model,
+      createdAt: new Date('2022-06-10'),
     };
     const post2 = {
       id: 2,
       title: 'Testowy 2',
       body: 'Zawartość testowa 2',
       owner: user1Model,
+      createdAt: new Date('2022-06-09'),
     };
     const post3 = {
       id: 3,
       title: 'Testowy 3',
       body: 'Zawartość testowa 3',
       owner: user2Model,
+      createdAt: new Date('2022-02-06'),
     };
 
     const post1Model = this.store.createRecord('post', post1);
