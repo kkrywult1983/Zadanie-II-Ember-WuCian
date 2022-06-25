@@ -75,6 +75,7 @@
     "edition": "octane"
   },
   "dependencies": {
+    "ember-pikaday": "^4.0.0",
     "moment": "^2.29.3",
     "moment-timezone": "^0.5.34"
   }

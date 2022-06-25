@@ -1,7 +1,8 @@
 <div class='card'>
   <div class='card-body'>
-    <h6 class='card-subtitle mb-2 text-muted pedal'>Create date:
-      {{moment-format @post.createdAt 'MM-DD-YYYY HH:mm'}}</h6>
+    <h6 class='card-subtitle mb-2 text-muted pedal'>Created at:
+      {{moment-format @post.createdAt 'DD-MM-YY HH:mm'}}
+    </h6>
     <h2 class='card-title'><LinkTo
         @route='home.post.show'
         @model={{@post}}

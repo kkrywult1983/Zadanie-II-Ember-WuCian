@@ -1,15 +1,27 @@
 {{#if this.isAlreadyLikedByCurrentUser}}
-  <a href='#' class='card-link' {{on 'click' this.onDislike}}>
+  <button
+    type='button'
+    class='btn btn-link card-link'
+    {{on 'click' this.onDislike}}
+  >
     Dislike ({{@post.likes.length}})
     <Posts::List::Item::Actions::WhoLikesItTooltip @post={{@post}} />
-  </a>
+  </button>
 {{else}}
-  <a href='#' class='card-link' {{on 'click' this.onLike}}>
+  <button
+    type='button'
+    class='btn btn-link card-link'
+    {{on 'click' this.onLike}}
+  >
     Like ({{@post.likes.length}})
     <Posts::List::Item::Actions::WhoLikesItTooltip @post={{@post}} />
-  </a>
+  </button>
 {{/if}}
 
 {{#if this.isCreatedByCurrentUser}}
-  <a href='#' class='card-link' {{on 'click' this.onDelete}}>Delete</a>
+  <button
+    type='button'
+    class='btn btn-link card-link'
+    {{on 'click' this.onDelete}}
+  >Delete</button>
 {{/if}}
