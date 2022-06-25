@@ -2,13 +2,23 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import moment from 'moment';
+import { inject as service } from '@ember/service';
 
 export default class HomePostsController extends Controller {
+  @service store;
   @tracked dateFrom;
   @tracked dateTo;
   @tracked sort;
+  @tracked selectedAuthors = []; // z paczki Ember Power Selected
+
+  constructor() {
+    super(...arguments);
+    this.authors = this.store.findAll('user');
+  }
 
   queryParams = ['dateFrom', 'dateTo', 'sort'];
+
+  authors = ['Xavier', 'Marco', 'Jimmy'];
 
   get shouldBeFilteredBetweenDates() {
     return Boolean(this.startDate && this.endDate);
@@ -116,5 +126,10 @@ export default class HomePostsController extends Controller {
     }
 
     this.sort = undefined;
+  }
+
+  @action
+  chooseAuthors(authors) {
+    this.selectedAuthors = authors;
   }
 }
