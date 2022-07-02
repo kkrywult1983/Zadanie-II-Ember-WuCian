@@ -12,6 +12,7 @@ module('Integration | Component | navbar', function (hooks) {
 
     await render(hbs`<Navbar />`);
 
+    // eslint-disable-next-line prettier/prettier
     assert.dom(this.element).hasText('');
 
     // Template block usage:

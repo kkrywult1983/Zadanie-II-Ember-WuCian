@@ -1,0 +1,27 @@
+paczki:
+ember intl - paczka do translacji (@service intl)
+
+ localhost/_analyze - testuje wydajność aplikacji.
+Paginacja, infinityloader - paczka ember-infinity
+robot 3T -backend
+Power Selector
+Nie uzywać moment tylko DayJ - czy jakos tak.
+MaterialUI - paczka z ikonkami.
+Story book - paczka
+Na Car Rental - adasia ustawić jako zatwierdzającego.
+app.shortcut.com. - apka do developu
+
+this.cosTam?.adress?.house?.number - jeśli cosTam istnieje w obiekcie to sprawdź czy ma np. adress - Bardzo fajne
+emotikony map, reduce, filter
+
+lodash -sortByKlonowanie obiektów - uważać na referancje, - uzywamy do tego JSON stringify i potem pharse na nowy obiekt lub lodash-owy _clone
+git stash - wraca zmiany
+ember truth helpers -paczki z helperami
+paczka faker - w projekcie embera.
+
+
+
+
+
+
+
