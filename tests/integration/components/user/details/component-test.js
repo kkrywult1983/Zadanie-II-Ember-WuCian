@@ -5,6 +5,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import {faker} from '@faker-js/faker'
+import {setupMirage} from 'ember-cli-mirage/test-support'
 
 module('Integration | Component | user/details', function (hooks) {
   setupRenderingTest(hooks);
